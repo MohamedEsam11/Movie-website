@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+}
+:root{
+    --main-color:#ff0000;
+    --bg-color:#fff;
+    --text-color:#000000;
+}
+
+body{
+    background-image: url("../image/photo_2024-05-03_01-30-41.jpg");
+    background-size: cover;
+}
+nav{
+    position: fixed;
+    z-index: 1;
+    padding: 25px 60px;
+}
+header{
+    position: fixed;
+    width: 100%;
+    right: 0%;
+    top: 0%;
+    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 20px 100px;
+    transition: 0.5s;
+    padding: 20px 100px;
+    background: var(--text-color);
+}
+.logo{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+.logo .bx{
+    font-size: 24px;
+    color: var(--main-color);
+}
+.nav{
+    display: flex;
+    column-gap: 5rem;
+}
+.nav li{
+    position: relative;
+
+}
+.nav a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--bg-color);
+}
+.nav a::after{
+    content:'';
+    width: 0%;
+    height: 2px;
+    background: var(--main-color);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.4s all linear;
+}
+.nav a:hover::after , .nav .home-ac::after{
+    width: 100%;
+}
+.botton{
+    padding: 0.7rem 1.4rem;
+    color: var(--bg-color);
+    font-weight: 400;
+    border-radius: 0.5rem;
+    background: var(--main-color);
+
+}
+.botton:hover{
+    background:#e40a0a;}
+
+.from-wrapper{
+    background: rgb(0, 0, 0,0.75);
+    width: 475px;
+    height: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 2px solid rgb(191 36 36);
+    border-radius: 20px;
+    
+}
+.from-wrapper h2 {
+    color: #fff;
+    font-size: 2rem;
+    position: absolute;
+    left: 38%;
+    top: 8%;
+}
+.input-box2 input ,.input-box3 input 
+{
+    background:transparent ;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+    padding: 0 20px 0 5px;
+    color: #fff;
+    font-size: 16px;
+    position: absolute;
+}
+
+.input-box2 input{
+    width: 75%;
+    height: 45px;
+    top: 20%;
+    left: 13%;
+}
+input::placeholder{
+    color: #fff;
+
+}.input-box3 input{
+    width: 75%;
+    height: 45px;
+    top: 35%;
+    left: 13%;
+}
+form button{
+    width: 75%;
+    padding: 16px 0;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 4px;
+    background: #e50914;
+    margin: 25px 0 10px ;
+    transition: 0.1s ease;
+    position: absolute;
+    top: 45%;
+    left: 13%;
+}
+.user , .email ,.pass,.confp{
+    color: var(--bg-color);
+    position: absolute;
+}
+.email{
+    left: 83%;
+    top: 23%;
+}
+.pass{
+    left: 83%;
+    top: 38%;
+}
+form .from-help{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 330px;
+   
+}
+
+form .remember-me input{
+    margin-right: 5px;
+    color: #b3b3b3;
+}
+form .form-help :where(label,a){
+    font-size: 0.9rem;
+
+}
+.from-wrapper :where(label,p,small,a){
+    color: #b3b3b3;
+
+}
+.from-wrapper p a{
+    color: #fff;
+}
+.from-wrapper small{
+    display: block;
+    margin-top: 15px;
+    position: relative;
+    top: 70%;
+    left: 13%;
+}
+.label{
+    position: relative;
+    top: 70%;
+    left: 13%;
+}
+.from-wrapper small  a{
+    color: #0071eb;
+
+}
+.from-wrapper a{
+    text-decoration: none;
+
+}
+
+.from-wrapper a:hover{
+    text-decoration: underline;
+    
+}
+#bars {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.582);
+    border-radius: 10px;
+    /* position: relative;
+    z-index: 2000; */
+  }
+  .dropd{
+    display: none;
+    position: absolute;
+    top:85px;
+    background-color: rgba(131, 131, 131, 0.5);
+    width: 100%;
+    z-index: 50;
+    left: 0;
+  }
+  .dropd a{
+    text-decoration: none;
+    color: black;
+  }
+@media (max-width: 1255px) {
+    .nav , .willhide{
+      display: none;
+    }
+    #bars{
+      display: block;
+    }
+}
+@media (max-width: 600px){
+
+    .from-wrapper{
+        width: 100%  !important;
+        height: 80% !important;
+        bottom: 0 !important;
+    }
+}
